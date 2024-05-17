@@ -1,0 +1,42 @@
+@media only screen and (max-width: 480px) {
+  .nav {
+    padding: 10px;
+    display: flex;
+  }
+
+  .tombol-menu {
+    display: block;
+  }
+
+  .restaurant-detail__poster img {
+    width: 100%;
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    padding: 10px;
+  }
+
+  .tombol-menu {
+    display: inline-block;
+  }
+
+  .nav-list {
+    display: none;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .nav-item a {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,266 @@
+:root {
+  --color-primary: #183d3d;
+  --color-secondary: #5c8374;
+  --color-tertiary: #93b1a6;
+  --color-text: #fff;
+  --font-primary: "Merriweather", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+body {
+  background-color: var(--color-primary);
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+#drawer {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-110%);
+  transition: transform 0.8s ease-in-out;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#drawer.open {
+  transform: translate(0, 0);
+}
+.menumob {
+  text-align: center;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  list-style-type: none;
+}
+.navitemsmob {
+  list-style-type: none;
+}
+.navitemsmob a {
+  text-decoration: none;
+  color: var(--color-text);
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  margin-block: 9px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-item {
+  margin-right: 20px;
+}
+.nav-item a,
+.tombol-menu {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  padding: 10px 15px;
+  min-width: 44px;
+  min-height: 44px;
+  box-sizing: border-box;
+}
+a {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+.nav-item a:hover {
+  background-color: var(--color-tertiary);
+  border-radius: 10px;
+  color: black;
+  font-weight: 500;
+}
+.tombol-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  color: var(--color-text);
+}
+.main-container {
+  color: var(--color-text);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.restaurant-card {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--color-secondary);
+}
+.card-title {
+  margin: 8px 0 8px 3px;
+}
+.card-title a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+#restaurant {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+.resto-item__header__poster {
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.resto-item {
+  width: 100%;
+}
+.content__heading {
+  text-align: center;
+  margin-block: 20px;
+}
+.city-label {
+  text-align: center;
+  margin-block: 20px;
+}
+.details {
+  padding: 10px 20px;
+}
+.details h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.restaurant-detail {
+  border-radius: 5px;
+}
+.restaurant-detail__poster {
+  display: flex;
+  justify-content: center;
+}
+.restaurant-detail__poster img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+}
+.restaurant-detail__info {
+  flex: 1;
+  padding: 20px;
+  background-position: center;
+}
+.overview {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.restaurant-detail__info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.restaurant-detail__info li {
+  margin-bottom: 30px;
+}
+.restaurant-detail__info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+.restaurant-detail__info p {
+  font-size: 16px;
+  color: var(--color-text);
+}
+.overview:hover {
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+.resto-review {
+  margin-block: 30px;
+}
+.review {
+  margin-top: 20px;
+}
+.skip2content {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  color: var(--color-text);
+  font-weight: 500;
+  left: 0;
+  line-height: 44px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  top: -50px;
+  transition: 0.35s;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 1500;
+}
+.skip2content:focus {
+  top: 30px;
+}
+.favorite {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-block;
+}
+.jumbotron {
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+}
+
+.jumbotron img {
+  width: 100%;
+  height: 500px;
+}
+footer {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
