@@ -64,18 +64,20 @@ module.exports = {
       runtimeCaching: [
         {
           urlPattern: ({ url }) =>
-            url.href.startsWith("https://api.themoviedb.org/3/"),
+            url.href.startsWith("https://restaurant-api.dicoding.dev"),
           handler: "StaleWhileRevalidate",
           options: {
-            cacheName: "themoviedb-api",
+            cacheName: "restaurant-api",
           },
         },
         {
           urlPattern: ({ url }) =>
-            url.href.startsWith("https://image.tmdb.org/t/p/w500/"),
+            url.href.startsWith(
+              "https://restaurant-api.dicoding.dev/images/medium/"
+            ),
           handler: "StaleWhileRevalidate",
           options: {
-            cacheName: "themoviedb-image-api",
+            cacheName: "restaurant-image-api",
           },
         },
       ],
