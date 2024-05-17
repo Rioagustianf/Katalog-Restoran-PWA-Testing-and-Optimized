@@ -55,7 +55,7 @@ module.exports = {
         }),
       ],
     }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({ analyzerMode: "static", openAnalyzer: false }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: "./sw.bundle.js",
       runtimeCaching: [
