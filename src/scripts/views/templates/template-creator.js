@@ -8,9 +8,12 @@ const createRestaurantItemTemplate = (resto) => `
           Kota ${resto.city}
         </span>
       </div>
-      <img class="resto-item__header__poster lazyload" src='${
-  CONFIG.BASE_IMAGE_URL + resto.pictureId
-}' alt="${resto.name}" />
+        <picture>
+          <source data-srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
+          <img class="resto-item__header__poster lazyload"
+              data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" 
+             alt="${resto.name}" />
+        </picture>
     </div>
     <div class="card-body">
       <div class="resto-item__header__rating">
@@ -30,9 +33,12 @@ const createRestaurantItemTemplate = (resto) => `
 const createRestaurantDetailTemplate = (resto) => `
     <div class="restaurant-detail">
       <div class="restaurant-detail__poster">
-        <img class="lazyload" src="${
-  CONFIG.BASE_IMAGE_URL + resto.pictureId
-}" alt="${resto.name}">
+        <picture>
+          <source data-srcset="${CONFIG.BASE_IMAGE_URL + resto.pictureId}">
+          <img class="lazyload" 
+            data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" 
+            alt="${resto.name}">
+        </picture>
       </div>
     </div>
     <div class="restaurant-detail__info">
